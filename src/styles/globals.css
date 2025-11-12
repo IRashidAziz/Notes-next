@@ -66,6 +66,7 @@ body {
   margin-right: auto;
   text-align: center;
   margin-top: 20px;
+  user-select: none;
 }
 
 .buttons {
@@ -76,4 +77,10 @@ body {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+}
+
+::selection,
+::-moz-selection {
+  background-color: black;
+  color: white;
 }
