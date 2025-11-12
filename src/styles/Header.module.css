@@ -6,6 +6,7 @@
 }
 
 .logo {
+  user-select: none;
   font-family: var(--font-poppins);
   margin-top: 20px;
   display: inline-block;
@@ -31,6 +32,7 @@
   font-weight: bold;
   font-size: 1.2rem;
   cursor: pointer;
+  user-select: none;
 }
 
 .last_header_item {
