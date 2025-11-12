@@ -1,0 +1,39 @@
+.header {
+  background: transparent;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  font-family: var(--font-poppins);
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 600;
+  background: linear-gradient(
+    90deg,
+    rgba(232, 46, 145, 1) 0%,
+    rgba(164, 67, 180, 1) 50%,
+    rgba(107, 80, 213, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: rgba(232, 46, 145, 1);
+}
+
+.demo {
+  color: black;
+  font-family: var(--font-urbanist);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.last_header_item {
+  /* margin-top: 2px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}

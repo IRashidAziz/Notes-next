@@ -1,0 +1,15 @@
+.button {
+  font-family: var(--font-urbanist);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid #dadada;
+  padding: 10px 36px;
+  text-align: center;
+  margin: 10px;
+}
+
+.transparent {
+  background: transparent;
+  color: black;
+  box-shadow: inset 1px 0 10px #4e474717, 4px 7px 10px 0px #e8e8e8b0;
+}

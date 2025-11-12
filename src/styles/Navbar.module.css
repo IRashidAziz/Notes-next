@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+  gap: 50px;
+  margin-top: 21.75px;
+}
+
+.li_items {
+  color: black;
+  font-family: var(--font-urbanist);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
