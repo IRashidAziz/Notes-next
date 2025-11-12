@@ -15,6 +15,8 @@ const Button = ({
   const BaseClasses = css.button;
   const variants: Record<string, string> = {
     transparent: css.transparent,
+    white: css.white,
+    black: css.black,
   };
   return (
     <button

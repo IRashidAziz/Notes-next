@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Urbanist, Poppins } from "next/font/google";
+import { Space_Grotesk, Urbanist, Poppins, Montserrat } from "next/font/google";
 import HelmetProviderWrapper from "@/components/providers/HelmetProviderWrapper";
 import "../styles/globals.css";
 
@@ -9,6 +9,11 @@ const space_grtoesk = Space_Grotesk({
   display: "swap",
 });
 
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  display: "swap",
+});
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
@@ -32,12 +37,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="color-scheme" content="dark only" />
       </head>
       <body
-        className={`${space_grtoesk.variable} ${urbanist.variable} ${poppins.variable} antialiased`}
+        className={`${space_grtoesk.variable} ${urbanist.variable} ${poppins.variable} ${montserrat.variable} antialiased`}
+        suppressHydrationWarning
       >
         <HelmetProviderWrapper>{children}</HelmetProviderWrapper>
       </body>

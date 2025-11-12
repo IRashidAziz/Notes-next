@@ -5,8 +5,17 @@
 }
 
 .li_items {
-  color: black;
   font-family: var(--font-urbanist);
   font-weight: 600;
   font-size: 1.2rem;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+}
+
+.active {
+  color: black;
+}
+
+.unactive {
+  color: #969696;
 }
