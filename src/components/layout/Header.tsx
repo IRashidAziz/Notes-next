@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`${css.header}`}>
+    <header >
       <div className={`${css.header_content}`}>
         <div className={`${css.logo}`}>FlashNotes</div>
 

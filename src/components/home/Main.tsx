@@ -1,17 +1,12 @@
 "use client";
 import React from "react";
 import Button from "@/components/ui/Button";
-import { motion } from "framer-motion";
 import css from "@/styles/Main.module.css";
 
 const Main = () => {
   const CancelDrag = (e: React.DragEvent) => e.preventDefault();
   return (
-    <motion.main
-      initial={{ y: 50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
+    <main>
       <div className={`${css.hero}`} onDragStart={CancelDrag}>
         Manage Your Notes, Tasks and Projects{" "}
         <span className={`${css.fancy}`}>Efficiently</span>
@@ -26,7 +21,7 @@ const Main = () => {
         <Button variant="white">Learn More</Button>
         <Button variant="black">Get Started</Button>
       </div>
-    </motion.main>
+    </main>
   );
 };
 
