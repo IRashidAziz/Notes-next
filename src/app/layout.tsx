@@ -14,6 +14,7 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
 });
+
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],

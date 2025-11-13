@@ -13,7 +13,7 @@ const Main = () => {
     >
       <div className={`${css.hero}`}>
         Manage Your Notes, Tasks and Projects{" "}
-        <span className="fancy">Efficiently</span>
+        <span className={`${css.fancy}`}>Efficiently</span>
       </div>
       <div className={`${css["hero-description"]}`}>
         Effortlessly organize your tasks, streamline your workflows, and enhance

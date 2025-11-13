@@ -8,8 +8,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-space: var(--font-space-grotesk);
+  --font-mont: var(--font-montserrat);
+  --font-pop: var(--font-poppins);
+  --font-urban: var(--font-urbanist);
 }
 
 body {
@@ -21,4 +23,3 @@ body {
 .home {
   @apply min-h-screen bg-[#ffffff] font-sans dark:bg-[#ffffff];
 }
-

@@ -39,7 +39,7 @@
 }
 
 .fancy {
-  font-family: var(--font-space-grotesk);
+  font-family: var(--font-space);
   letter-spacing: -2.5px;
   background: linear-gradient(
     90deg,
