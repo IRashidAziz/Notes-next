@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Urbanist, Poppins, Montserrat } from "next/font/google";
-import HelmetProviderWrapper from "@/components/providers/HelmetProviderWrapper";
 import "../styles/globals.css";
 
 const space_grtoesk = Space_Grotesk({
@@ -46,7 +45,7 @@ export default function RootLayout({
         className={`${space_grtoesk.variable} ${urbanist.variable} ${poppins.variable} ${montserrat.variable} antialiased`}
         suppressHydrationWarning
       >
-        <HelmetProviderWrapper>{children}</HelmetProviderWrapper>
+        {children}
       </body>
     </html>
   );

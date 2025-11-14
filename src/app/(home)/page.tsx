@@ -1,11 +1,14 @@
-import Title from "@/components/providers/TitleProviderWrapper";
 import Header from "@/components/layout/Header";
 import Main from "@/components/home/Main";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "FlashNotes",
+};
 
 export default function Home() {
   return (
     <>
-      <Title>FlashNotes</Title>
       <div className="home">
         <Header />
         <Main />

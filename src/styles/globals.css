@@ -23,3 +23,74 @@ body {
 .home {
   @apply min-h-screen bg-[#ffffff] font-sans dark:bg-[#ffffff];
 }
+
+.homedark {
+  @apply min-h-screen bg-[#000000] font-sans dark:bg-[#000000];
+}
+
+.heading {
+  padding-top: 40px;
+  margin-left: auto;
+  margin-bottom: auto;
+}
+
+.signhead {
+  text-align: center;
+  font-size: xx-large;
+  color: white;
+  font-family: var(--font-space-grotesk);
+  font-weight: 500;
+}
+
+.sign-description {
+  text-align: center;
+  color: #bbbbbb;
+  padding-top: 10px;
+  font-family: var(--font-space-grotesk);
+}
+
+.signhead::selection,
+.sign-description::selection {
+  background-color: white;
+  color: black;
+}
+
+.splitter-container {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  margin: 20px auto 16px auto;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.splitter-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #555;
+}
+
+.splitter-text {
+  padding: 0 15px;
+  white-space: nowrap;
+}
+
+.fields {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.login {
+  text-align: center;
+  color: #8e8e8e;
+  margin-top: 16px;
+  font-weight: 500;
+}
+
+.loginbtn {
+  color: white;
+}

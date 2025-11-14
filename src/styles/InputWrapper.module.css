@@ -1,0 +1,22 @@
+.InputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  user-select: none;
+  font-weight: 500;
+  color: white;
+}
+
+.inputdiv {
+  width: 100%;
+}
+
+.input {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #1a1a1a;
+  color: white;
+}
