@@ -11,11 +11,15 @@ type ButtonProps = {
     | "fullwhite";
   className?: string;
   onClick?: () => void;
+  type?: "submit" | "button";
+  disabled?: boolean;
 };
 const Button = ({
   children,
   variant = "transparent",
   className = "rounded-md",
+  type,
+  disabled = false,
   ...props
 }: ButtonProps) => {
   const BaseClasses = css.button;
@@ -28,7 +32,11 @@ const Button = ({
   };
   return (
     <button
-      className={`${BaseClasses} ${variants[variant]} ${className}`}
+      className={`${BaseClasses} ${variants[variant]} ${className} ${
+        disabled ? "opacity-50 cursor-not-allowed" : ""
+      }`}
+      type={type}
+      disabled={disabled}
       {...props}
     >
       {children}

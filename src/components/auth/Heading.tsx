@@ -1,17 +1,21 @@
 "use client";
 import React from "react";
 
-const Heading = () => {
+type HeadingProps = {
+  title: string;
+  description: string;
+};
+const Heading = ({ title, description }: HeadingProps) => {
   const CancelDrag = (e: React.DragEvent) => {
     e.preventDefault();
   };
   return (
     <div className="heading">
       <div className="signhead" onDragStart={CancelDrag}>
-        Sign Up Account
+        {title}
       </div>
       <div className="sign-description" onDragStart={CancelDrag}>
-        Enter your personal data to create your account
+        {description}
       </div>
     </div>
   );

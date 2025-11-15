@@ -73,6 +73,7 @@ body {
 .splitter-text {
   padding: 0 15px;
   white-space: nowrap;
+  user-select: none;
 }
 
 .fields {
@@ -89,6 +90,7 @@ body {
   color: #8e8e8e;
   margin-top: 16px;
   font-weight: 500;
+  padding-bottom: 20px;
 }
 
 .loginbtn {
@@ -97,4 +99,10 @@ body {
   &:hover {
     text-decoration: underline;
   }
+}
+
+.forgotpw {
+  font-family: var(--font-space-grotesk);
+  font-weight: 500;
+  @apply text-sm text-blue-600 dark:text-blue-400 hover:underline;
 }

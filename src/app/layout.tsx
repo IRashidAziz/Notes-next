@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Urbanist, Poppins, Montserrat } from "next/font/google";
 import "../styles/globals.css";
+import { AuthProvider } from "@/contexts/AuthContext";
 
 const space_grtoesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -45,7 +46,7 @@ export default function RootLayout({
         className={`${space_grtoesk.variable} ${urbanist.variable} ${poppins.variable} ${montserrat.variable} antialiased`}
         suppressHydrationWarning
       >
-        {children}
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );
