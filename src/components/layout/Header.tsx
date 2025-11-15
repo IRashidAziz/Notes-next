@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import css from "@/styles/Header.module.css";
 import Navbar from "./Navbar";
-import Button from "../ui/Button";
 import Link from "next/link";
 
 const Header = () => {
