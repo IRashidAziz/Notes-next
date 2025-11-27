@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import css from "@/styles/Header.module.css";
 import Navbar from "./Navbar";
-import Link from "next/link";
 import Linker from "../ui/Linker";
 
 const Header = () => {
@@ -15,7 +14,7 @@ const Header = () => {
   return (
     <header>
       <div className={`${css.header_content}`}>
-        <div className={`${css.logo}`}>FlashNotes</div>
+        <div className={`${css.logo}`}>Recall.ai</div>
 
         {/* Hamburger Icon */}
         <button className={`${css.hamburger}`} onClick={toggleMenu}>

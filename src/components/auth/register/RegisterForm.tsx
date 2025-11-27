@@ -147,15 +147,13 @@ export default function RegisterForm() {
       } else {
         setErrors({ general: "Registration failed. Please try again." });
       }
-    } finally {
-      setLoading(false);
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
       {errors.general && (
-        <div className="w-[30%] ml-auto mr-auto mb-4 p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-500">
+        <div className="w-[90%] sm:w-[70%] md:w-[50%] lg:w-[30%] ml-auto mr-auto mb-4 p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-500">
           <p className="text-red-700 dark:text-red-300 text-center">
             {errors.general}
           </p>
@@ -182,7 +180,7 @@ export default function RegisterForm() {
           error={errors.Last_name}
         />
       </div>
-      <div className="w-[30%] flex flex-col gap-4 ml-auto mr-auto mt-4">
+      <div className="w-[90%] sm:w-[70%] md:w-[50%] lg:w-[30%] flex flex-col gap-4 ml-auto mr-auto mt-4">
         <Input
           title="Email"
           type="email"
@@ -268,7 +266,7 @@ export default function RegisterForm() {
           )}
         </div>
       </div>
-      <div className="w-[30%] ml-auto mr-auto mt-6">
+      <div className="w-[90%] sm:w-[70%] md:w-[50%] lg:w-[30%] ml-auto mr-auto mt-6">
         <Button
           variant="fullwhite"
           className="w-full rounded-lg"

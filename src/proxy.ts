@@ -1,8 +1,20 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { jwtVerify } from "jose";
 
-export function proxy(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const token = request.cookies.get("token")?.value;
+  let isValidToken = false;
+  if (token) {
+    try {
+      const secret = new TextEncoder().encode(process.env.JWT_SECRET);
+      await jwtVerify(token, secret);
+      isValidToken = true;
+    } catch {
+      isValidToken = false;
+    }
+  }
+
   const protectedPaths = ["/dashboard"];
   const isProtectedPath = protectedPaths.some((path) =>
     request.nextUrl.pathname.startsWith(path)
@@ -21,11 +33,10 @@ export function proxy(request: NextRequest) {
   const isAuthPath = authPaths.some((path) =>
     request.nextUrl.pathname.startsWith(path)
   );
-
-  if (isProtectedPath && !token) {
+  if (isProtectedPath && !isValidToken) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
-  if (isAuthPath && token) {
+  if (isAuthPath && isValidToken) {
     return NextResponse.redirect(new URL("/dashboard", request.url));
   }
 

@@ -6,17 +6,15 @@ import css from "@/styles/Main.module.css";
 const Main = () => {
   const CancelDrag = (e: React.DragEvent) => e.preventDefault();
   return (
-    <main>
-      <div className={`${css.hero}`} onDragStart={CancelDrag}>
-        Manage Your Notes, Tasks and Projects{" "}
-        <span className={`${css.fancy}`}>Efficiently</span>
-      </div>
-      <div className={`${css["hero-description"]}`} onDragStart={CancelDrag}>
-        Effortlessly organize your tasks, streamline your workflows, and enhance
-        collaboration with our all-in-one solution. Whether you&apos;re managing
-        personal projects, working solo, or teaming up with colleagues, our
-        platform helps you stay focused, productive, and on top of your game.
-      </div>
+    <main onDragStart={CancelDrag} className="main">
+      <h1 className="hero">
+        Study Less. <br />
+        <span className="remember">Remember Everything.</span>
+      </h1>
+      <p className="hero-description">
+        Your personal AI tutor. Upload any PDF and master the material in
+        minutes, not hours.
+      </p>
       <div className={`${css.buttons}`}>
         <Button variant="white">Learn More</Button>
         <Button variant="black">Get Started</Button>

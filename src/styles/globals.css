@@ -29,7 +29,6 @@ body {
 }
 
 .heading {
-  padding-top: 40px;
   margin-left: auto;
   margin-bottom: auto;
 }
@@ -77,12 +76,40 @@ body {
 }
 
 .fields {
-  width: 30%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   gap: 10px;
   justify-content: space-between;
+  flex-direction: column;
+}
+
+.fields > * {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .fields {
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .fields {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fields {
+    width: 30%;
+    flex-direction: row;
+  }
+
+  .fields > * {
+    width: calc(50% - 5px);
+  }
 }
 
 .login {
@@ -90,7 +117,6 @@ body {
   color: #8e8e8e;
   margin-top: 16px;
   font-weight: 500;
-  padding-bottom: 20px;
 }
 
 .loginbtn {
@@ -105,4 +131,28 @@ body {
   font-family: var(--font-space-grotesk);
   font-weight: 500;
   @apply text-sm text-blue-600 dark:text-blue-400 hover:underline;
+}
+
+.holdbutton {
+  display: inline-block;
+  margin-right: 10px;
+  position: absolute;
+  position: inherit;
+  user-select: none;
+}
+
+.main {
+  @apply flex flex-col items-center justify-center px-4 py-16;
+}
+
+.hero {
+  @apply text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-slate-900 mb-6 leading-[1] text-center max-w-5xl mt-8;
+}
+
+.remember {
+  @apply text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600;
+}
+
+.hero-description {
+  @apply max-w-xl mx-auto text-base md:text-lg lg:text-xl text-slate-500 font-medium text-center px-4;
 }

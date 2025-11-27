@@ -5,7 +5,9 @@ import {
   useState,
   useEffect,
   ReactNode,
+  useCallback,
 } from "react";
+import { usePathname } from "next/navigation";
 import axios from "@/lib/axios";
 
 interface User {
@@ -25,12 +27,14 @@ interface AuthContextType {
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
+const publicRoutes = ["/login", "/register", "/forgot-password", "/"];
 
 export function AuthProvider({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
-  async function fetchUser() {
+  const fetchUser = useCallback(async () => {
     try {
       const res = await axios.get("/auth/me");
       setUser(res.data.user);
@@ -39,7 +43,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     } finally {
       setLoading(false);
     }
-  }
+  }, []);
 
   async function logout() {
     try {
@@ -51,8 +55,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   useEffect(() => {
-    fetchUser();
-  }, []);
+    const isPublicRoute = publicRoutes.some((route) =>
+      pathname.startsWith(route)
+    );
+
+    if (!isPublicRoute) {
+      fetchUser();
+    } else {
+      setLoading(false);
+    }
+  }, [pathname, fetchUser]);
 
   return (
     <AuthContext.Provider value={{ user, loading, setUser, fetchUser, logout }}>

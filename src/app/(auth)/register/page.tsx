@@ -11,14 +11,16 @@ export const metadata: Metadata = {
 
 const Register = () => {
   return (
-    <div className="homedark">
-      <Heading
-        title="Sign Up Account"
-        description="Enter your personal data to create your account"
-      />
-      <SocialButtons />
-      <Splitter />
-      <RegisterForm />
+    <div className="homedark min-h-screen flex items-center justify-center">
+      <div className="w-full">
+        <Heading
+          title="Sign Up Account"
+          description="Enter your personal data to create your account"
+        />
+        <SocialButtons />
+        <Splitter />
+        <RegisterForm />
+      </div>
     </div>
   );
 };

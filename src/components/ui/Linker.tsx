@@ -32,6 +32,7 @@ const Linker = ({
     <Link
       href={href}
       className={`inline-block ${BaseClasses} ${variants[variant]} ${className}`}
+      draggable={false}
       {...props}
     >
       {children}

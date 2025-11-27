@@ -10,14 +10,17 @@ export const metadata: Metadata = {
 };
 const Login = () => {
   return (
-    <div className="homedark">
-      <Heading
-        title="Log In Account"
-        description="Enter your credentials to log in to your account"
-      />
-      <SocialButtons />
-      <Splitter />
-      <LoginForm />
+    <div className="homedark min-h-screen flex items-center justify-center">
+      <div className="w-full">
+        <Heading
+          title="Log In Account"
+          description="Enter your credentials to log in to your account"
+          className="loginhead"
+        />
+        <SocialButtons />
+        <Splitter />
+        <LoginForm />
+      </div>
     </div>
   );
 };
